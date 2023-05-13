@@ -1,75 +1,46 @@
-# mern-ecommerce
+# Ecommarce 
 
-> Frontend-> React JS
 
-> Backend-> Node JS & Express JS
+> Frontend-> React JS + Material core for ui
 
-> Database-> MongoDB
+> Backend-> Node JS & Express JS 
+
+> Database-> MongoDB [mongoose compass for local host]
 
 ## Installation process
-1. #### clone the repo using this command
-    ```bash
-    git clone https://github.com/ashraf-kabir/mern-ecommerce.git
-    ```
+1. #### clone the repo
+
 2. #### install npm packages
     1. install backend packages
-    ```bash
-    cd mern-ecommerce
+    ```
+    cd web_shop
     npm install
     ```
     2. install frontend packages
-    ```bash
+    ```
     cd client
     npm install
     ```
-3. go to the parent folder of mern-ecommerce & create .env for connection, JWT_SECRET, BRAINTREE_MERCHANT_ID, BRAINTREE_PUBLIC_KEY and BRAINTREE_PRIVATE_KEY.
 
-    ```bash
-    cd mern-ecommerce
-    sudo nano .env
-    ```
-    (ctrl+x to save & nano follow instruction there)
     
-    ##### sample code for backend .env
+    ##### Backendend .env should contain this .env file
     ```env
     MONGODB_URI=YOUR_MONGODB_URI
-    JWT_SECRET=YOUR_JWT_SECRET
-    BRAINTREE_MERCHANT_ID=YOUR_BRAINTREE_MERCHANT_ID
-    BRAINTREE_PUBLIC_KEY=YOUR_BRAINTREE_PUBLIC_KEY
-    BRAINTREE_PRIVATE_KEY=YOUR_BRAINTREE_PRIVATE_KEY
+    JWT_SECRET=YOUR_JWT_SECREE
     ```
-4.  create another .env file inside client directory for REACT_APP_API_URL.
 
-    ```bash
-    cd mern-ecommerce/client
-    sudo nano .env
-    ```
-    ##### sample code for frontend .env
-    ```env
-    REACT_APP_API_URL=YOUR_API_URL
     ```
     ##### Instructions:
-    1. for mongodb atlas database creation follow this tutorial->https://www.youtube.com/watch?v=KKyag6t98g8
-    2. you can use any random string as JWTSECRET
-    3. for localhost REACT_APP_API_URL is http://localhost:5000/api
-       but for heroku (server deployment) it will be different
-    4. #### note: add .env on .gitignore
-    5. for server deployment use secrets directly
+ 
+    1 you can use any random string as JWTSECRET
+    2. for localhost REACT_APP_API_URL is http://localhost:5000/api
+    3. #### note: add .env on .gitignore
 
-5. <b>deploy this project</b> on your local server by using this command
-    ```bash
-    cd mern-ecommerce
-    npm run dev
-    ```
-    #### note: both backend & frontend server will start at once with the above command.
 
-6. #### Database Structure: (Table: columns)
-    1. categories: _id, name, createdAt, updatedAt;
-    2. orders:  _id, status, products (Array), transaction_id, amount, address, user (Object), createdAt, updatedAt
-    3. products: _id, photo (Object), sold, name, description, price, category, shipping, quantity, createdAt, updatedAt
-    4. users: _id, role, history (Array), name, email, salt, hashed_password, createdAt, updatedAt
 
-### App Description:
+
+
+### User stories  achieved :
     1. user can view all products
     2. user can view single product
     3. user can search products and view products by category and price range
@@ -79,6 +50,8 @@
     7. admin can create categories
     8. admin can view ordered products
     9. admin can change the status of a product (processing, shipped, delivered, etc.)
-
-6. <b>Deployed on</br> https://ecommerce-ak.herokuapp.com/ 
-7. raise a star to support me
+### User stories  achieved to achive in future sprint  :
+    1. implement payment getway like easypaysa,jazz clash etc
+    2. Shipment tracking api implementation like TCS api 
+    3.mobile responsive and better ui 
+    4.improve speed and working on scaling 
