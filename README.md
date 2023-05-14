@@ -55,3 +55,14 @@
     2. Shipment tracking api implementation like TCS api 
     3.mobile responsive and better ui 
     4.improve speed and working on scaling 
+
+
+
+## To Run 
+
+just write the following command in terminal;
+
+npm run dev
+
+
+the above command will run both frontend and backend simultaneously.
